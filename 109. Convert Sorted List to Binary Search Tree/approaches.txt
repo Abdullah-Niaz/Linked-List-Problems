@@ -21,35 +21,6 @@ second approach is Here & tortose
 2. Move the slow pointer by 1
 3. Move the head poitner by 2
 4  slow pointer will always be at the mid 
-
-  
-
-        // if the root is null 
-        if(!head){
-            return NULL;
-        }
-
-        if(!head->next){
-            return new TreeNode(head->val);
-        }
-
-        ListNode *slow = head;
-        ListNode *fast = head;
-        ListNode *slow_prev = NULL;
-
-        while(fast != NULL && fast->next !=NULL){
-            slow_prev = slow;
-            slow = slow->next;
-            fast = fast->next->next;
-        }
-
-        // slow will always be at the mid
-        TreeNode *root = new TreeNode(slow->val);
-
-        slow_prev->next = NULL;
-
-        root->left = sortedListToBST(head);
-        root->right = sortedListToBST(slow->next);
-        
-        
-        return root;
+5. break down from the mid to make the equalant linked list
+6. make the head as a root further 
+7. slow as a left node

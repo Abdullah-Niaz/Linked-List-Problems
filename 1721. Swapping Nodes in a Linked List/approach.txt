@@ -1,0 +1,4 @@
+1. Find the length of linked list ( L )
+2. First k point of linked list from beggining
+3. Second k point of linked list from end (L - k + 1)
+4. Swap the Value of Both 

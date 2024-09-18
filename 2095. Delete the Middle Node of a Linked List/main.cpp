@@ -51,14 +51,14 @@ void printList(ListNode *head)
 {
     while (head)
     {
-        std::cout << head->val << " ";
+        cout << head->val << " ";
         head = head->next;
     }
-    std::cout << std::endl;
+    cout << endl;
 }
 
 // Helper function to create a linked list from an array
-ListNode *createList(const std::vector<int> &values)
+ListNode *createList(const vector<int> &values)
 {
     if (values.empty())
         return nullptr;
@@ -78,13 +78,13 @@ int main()
     Solution solution;
 
     // Test case: Linked list [1, 2, 3, 4, 5]
-    std::vector<int> values = {1, 2, 3, 4, 5};
+    vector<int> values = {1, 2, 3, 4, 5};
     ListNode *head = createList(values);
-    std::cout << "Original list: ";
+    cout << "Original list: ";
     printList(head);
 
     head = solution.deleteMiddle(head);
-    std::cout << "After deleting middle: ";
+    cout << "After deleting middle: ";
     printList(head);
 
     return 0;

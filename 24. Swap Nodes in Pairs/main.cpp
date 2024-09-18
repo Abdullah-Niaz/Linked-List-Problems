@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 // Definition for singly-linked list.
 struct ListNode
@@ -28,7 +29,7 @@ public:
 };
 
 // Helper function to create a linked list from an array of values
-ListNode *createLinkedList(std::initializer_list<int> values)
+ListNode *createLinkedList(initializer_list<int> values)
 {
     if (values.size() == 0)
         return nullptr;
@@ -50,10 +51,10 @@ void printLinkedList(ListNode *head)
 {
     while (head != nullptr)
     {
-        std::cout << head->val << " -> ";
+        cout << head->val << " -> ";
         head = head->next;
     }
-    std::cout << "nullptr" << std::endl;
+    cout << "nullptr" << endl;
 }
 
 int main()
@@ -63,12 +64,12 @@ int main()
     // Test case: [1, 2, 3, 4]
     ListNode *head = createLinkedList({1, 2, 3, 4});
 
-    std::cout << "Original List: ";
+    cout << "Original List: ";
     printLinkedList(head);
 
     head = solution.swapPairs(head);
 
-    std::cout << "Swapped List: ";
+    cout << "Swapped List: ";
     printLinkedList(head);
 
     return 0;

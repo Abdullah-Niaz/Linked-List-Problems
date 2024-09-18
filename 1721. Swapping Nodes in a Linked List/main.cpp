@@ -43,7 +43,7 @@ public:
         }
 
         // Swap the values of Node1 and Node2
-        std::swap(Node1->val, Node2->val);
+        swap(Node1->val, Node2->val);
         return head;
     }
 };
@@ -53,10 +53,10 @@ void printList(ListNode *head)
 {
     while (head != nullptr)
     {
-        std::cout << head->val << " ";
+        cout << head->val << " ";
         head = head->next;
     }
-    std::cout << std::endl;
+    cout << endl;
 }
 
 // Utility function to create a linked list from an array
@@ -81,13 +81,13 @@ int main()
     int n = sizeof(arr) / sizeof(arr[0]);
 
     ListNode *head = createList(arr, n);
-    std::cout << "Original List: ";
+    cout << "Original List: ";
     printList(head);
 
     int k = 2; // Example input k
     head = solution.swapNodes(head, k);
 
-    std::cout << "List after swapping: ";
+    cout << "List after swapping: ";
     printList(head);
 
     return 0;

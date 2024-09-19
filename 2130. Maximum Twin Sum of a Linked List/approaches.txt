@@ -1,0 +1,7 @@
+1. Appraoch is Two pointer apprach
+    1. Take two pointer
+    2. one from start and second from the end 
+    3. Sum the elements at the two pointers
+    4. Continue to incrase the first pointer and decreasing the second pointer 
+    5. Then compare the twin sum 
+    6. If the twin sum is equal to the target sum then return the index of the
